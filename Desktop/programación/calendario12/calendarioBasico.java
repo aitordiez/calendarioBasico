@@ -26,7 +26,7 @@ public class calendarioBasico
     {
         dia = dias;
         mes = meses;
-        anho = anhos;
+        anho = anhos - 2000;
     }
     
     public void avanzarDia() {
