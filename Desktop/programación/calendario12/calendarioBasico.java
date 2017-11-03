@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class calendarioBasico
+public class CalendarioBasico
 {
     // instance variables - replace the example below with your own
     private int dia;
@@ -15,21 +15,21 @@ public class calendarioBasico
     /**
      * Constructor for objects of class calendarioBasico
      */
-    public calendarioBasico()
+    public CalendarioBasico()
     {
         dia = 1;
         mes = 1;
         anho = 1;
     }
 
-    public void fijarCalendario(int dias, int meses, int anhos)
+    public void fijarFecha(int dias, int meses, int anhos)
     {
         dia = dias;
         mes = meses;
-        anho = anhos - 2000;
+        anho = anhos;
     }
     
-    public void avanzarDia() {
+    public void avanzarFecha() {
         if (dia == 28 && mes == 2){
             dia = 1;
             mes = mes + 1;
@@ -45,8 +45,8 @@ public class calendarioBasico
         }
     }
     
-    public void devolverCalendario() {  
-        System.out.println((dia < 10 ? "0"+ dia : dia) + "-" + (mes < 10 ? "0"+ mes : mes) + "-" + (anho < 10 ? "0"+ anho : anho));
+    public String obtenerFecha() {  
+        return (dia < 10 ? "0"+ dia : dia) + "-" + (mes < 10 ? "0"+ mes : mes) + "-" + (anho < 10 ? "0"+ anho : anho);
     }
 
 }
